@@ -1,276 +1,287 @@
 <!doctype html>
-<html lang="en" data-lang="en">
+<html lang="de" data-lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anime App Privacy Policy</title>
-<meta name="description" content="Privacy policy of the Android app Anime App / Datenschutzerklärung der Android-App Anime App.">
-<meta name="color-scheme" content="dark light">
+<title>Anime App – Datenschutzerklärung / Privacy Policy</title>
+<meta name="description" content="Datenschutzerklärung der Android-App Anime App / Privacy policy of the Android app Anime App.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#070707">
 <style>
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("fonts/inter-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
 :root {
-  --bg: #0f0d1a;
-  --bg-glow: #2a1650;
-  --card: #181527;
-  --card-border: #2c2745;
-  --text: #ece9f7;
-  --muted: #a39fbd;
-  --accent: #ff6fb1;
-  --accent-2: #8f7bff;
-  --accent-ink: #1a0b18;
-  --code-bg: #221e38;
-  --radius: 16px;
+  --background: #070707;
+  --paper: rgb(11 11 11);
+  --foreground: rgb(209 209 209);
+  --border: rgba(255,255,255,.1);
+  --divider: rgba(40,40,40,.4);
+  --muted: rgba(255,255,255,.4);
+  --muted-hi: rgba(255,255,255,.6);
+  --subtle: rgba(255,255,255,.06);
+  --brand: rgb(199 194 255);
+  --brand-400: rgb(159 146 255);
+  --brand-500: rgb(97 82 223);
+  --radius: .5rem;
+  --radius-card: .75rem;
 }
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #faf8ff;
-    --bg-glow: #e7dcff;
-    --card: #ffffff;
-    --card-border: #e4def5;
-    --text: #1d1930;
-    --muted: #625d7c;
-    --accent: #d6307f;
-    --accent-2: #5b46d6;
-    --accent-ink: #ffffff;
-    --code-bg: #f1edfc;
-  }
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+* { box-sizing: border-box; border-color: var(--border); }
+html { background: var(--background); color: var(--foreground); -webkit-text-size-adjust: 100%; scroll-behavior: smooth; color-scheme: dark; }
 body {
   margin: 0;
-  color: var(--text);
-  background:
-    radial-gradient(900px 420px at 85% -80px, var(--bg-glow), transparent 70%),
-    var(--bg);
-  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter Variable", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px; line-height: 1.55;
 }
-.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
-header { padding: 40px 0 8px; }
-.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
-.logo {
-  width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--accent-ink);
-  font-weight: 800; font-size: 20px;
-}
-.lang { display: inline-flex; padding: 4px; border-radius: 999px; background: var(--card); border: 1px solid var(--card-border); }
-.lang button {
-  appearance: none; border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 600;
-  padding: 6px 16px; border-radius: 999px; cursor: pointer; min-height: 36px;
-}
-.lang button[aria-pressed="true"] { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--accent-ink); }
-.lang button:focus-visible, a:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
-h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); line-height: 1.15; margin: 28px 0 6px; }
-.updated { color: var(--muted); margin: 0 0 8px; }
-.card {
-  background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius);
-  padding: 20px; margin: 16px 0;
-}
-.card.hl { border-color: transparent; background:
-  linear-gradient(var(--card), var(--card)) padding-box,
-  linear-gradient(135deg, var(--accent), var(--accent-2)) border-box; border: 1px solid transparent; }
-h2 { font-size: 1.2rem; margin: 0 0 10px; }
-h2 .n { color: var(--accent); margin-right: 6px; }
-p { margin: 0 0 12px; }
-p:last-child, ul:last-child { margin-bottom: 0; }
-ul { margin: 0 0 12px; padding-left: 1.2em; }
-li { margin: 4px 0; }
-a { color: var(--accent-2); text-underline-offset: 3px; }
-code { background: var(--code-bg); padding: 1px 6px; border-radius: 6px; font-size: .9em; overflow-wrap: anywhere; }
-.table { display: grid; gap: 10px; }
-.row { background: var(--code-bg); border-radius: 12px; padding: 12px 14px; }
-.row b { display: block; }
-.row span { color: var(--muted); font-size: .95rem; display: block; }
-footer { color: var(--muted); font-size: .9rem; text-align: center; margin-top: 32px; }
+.wrap { max-width: 44rem; margin: 0 auto; padding: 20px 16px 72px; }
+header .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.hd { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.tile { padding: .5rem; border-radius: var(--radius); border: 1px solid var(--border);
+  background: rgb(97 82 223 / .1); display: grid; place-items: center; }
+.tile svg { width: 1.5rem; height: 1.5rem; color: var(--brand-400); display: block; }
+h1 { font-size: 1.25rem; font-weight: 600; line-height: 1.3; margin: 0; }
+.sub { margin: 0; font-size: 1rem; color: var(--muted-hi); }
+.lang { display: inline-flex; gap: 6px; flex: none; }
+.btn { appearance: none; font: inherit; font-size: .875rem; font-weight: 500; height: 2.25rem; padding: 0 .75rem;
+  border-radius: var(--radius); border: 1px solid rgba(143,143,143,.2); background: transparent; color: rgb(202 202 202);
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: background .15s;
+  flex: none; white-space: nowrap; min-width: 2.75rem; }
+.btn:hover { background: rgba(90,90,90,.15); }
+.btn[aria-pressed="true"] { background: rgb(97 82 223 / .7); border-color: rgb(159 146 255 / .2); color: #fff; }
+.btn:focus-visible, a:focus-visible { outline: 1px solid rgba(255,255,255,.4); outline-offset: 2px; }
+.upd { margin: 16px 0 0; font-size: .875rem; color: var(--muted-hi); }
+main { margin-top: 24px; }
+section { margin: 0 0 32px; scroll-margin-top: 16px; }
+h2 { font-size: 1rem; font-weight: 600; margin: 0 0 12px; display: flex; gap: .5rem; align-items: baseline; }
+.n { color: var(--brand-400); font-weight: 600; min-width: 1.4em; }
+.card { background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius-card);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06); overflow: clip; }
+.card > .row + .row { border-top: 2px solid var(--divider); }
+.row { padding: 16px; font-size: .9375rem; overflow-wrap: break-word; }
+.row p { margin: 0 0 .75rem; }
+.row > :last-child { margin-bottom: 0; }
+.row b { font-weight: 600; color: rgb(230 230 230); }
+.row > b + p { margin-top: 4px; color: var(--muted-hi); }
+ul { margin: 0 0 .75rem; padding-left: 1.2em; }
+li { margin: .35rem 0; }
+a { color: var(--brand); text-underline-offset: 3px; font-weight: 500; }
+code { background: var(--subtle); padding: 1px 6px; border-radius: 6px; font-size: .875em; }
+.alert { background: rgb(97 82 223 / .1); border: 1px solid rgb(159 146 255 / .2); border-radius: var(--radius-card); padding: 16px; font-size: .9375rem; }
+.alert b { color: #fff; }
+.alert ul { margin: .5rem 0 0; }
+.toc { margin: 0 0 24px; }
+.toc ol { list-style: none; margin: 8px 0 0; padding: 0; columns: 1; }
+.toc li { margin: 0; }
+.toc a { display: flex; gap: .5rem; padding: 7px 0; text-decoration: none; font-weight: 500; }
+.toc a:hover { text-decoration: underline; }
+.toc-h { display: block; }
+footer { color: var(--muted-hi); font-size: .875rem; text-align: center; margin-top: 8px; }
 [data-l] { display: none; }
-html[data-lang="en"] [data-l="en"], html[data-lang="de"] [data-l="de"] { display: revert; }
-html[data-lang="en"] .row[data-l="en"], html[data-lang="de"] .row[data-l="de"] { display: block; }
-html[data-lang="en"] span[data-l="en"], html[data-lang="de"] span[data-l="de"],
-html[data-lang="en"] a[data-l="en"], html[data-lang="de"] a[data-l="de"] { display: inline; }
-html[data-lang="en"] button[data-l="en"], html[data-lang="de"] button[data-l="de"] { display: inline-block; }
-noscript ~ * { }
+html[data-lang="de"] [data-l="de"], html[data-lang="en"] [data-l="en"] { display: block; }
+html[data-lang="de"] span[data-l="de"], html[data-lang="en"] span[data-l="en"] { display: inline; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
 </style>
-<noscript><style>[data-l] { display: revert !important; } .row[data-l] { display: block !important; } span[data-l], a[data-l] { display: inline !important; } hr.ns { display: block; }</style></noscript>
+<noscript><style>[data-l] { display: block !important; } .lang { display: none; }</style></noscript>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div class="top">
-      <div class="brand"><div class="logo" aria-hidden="true">A</div><span>Anime App</span></div>
+      <div class="hd">
+        <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div>
+          <h1><span data-l="de">Datenschutzerklärung</span><span data-l="en">Privacy policy</span></h1>
+          <p class="sub">Anime App</p>
+        </div>
+      </div>
       <div class="lang" role="group" aria-label="Language / Sprache">
-        <button type="button" data-set="en" aria-pressed="true">EN</button>
-        <button type="button" data-set="de" aria-pressed="false">DE</button>
+        <button type="button" class="btn" data-set="de" aria-pressed="true">DE</button>
+        <button type="button" class="btn" data-set="en" aria-pressed="false">EN</button>
       </div>
     </div>
-    <h1 data-l="en">Privacy Policy</h1>
-    <h1 data-l="de">Datenschutzerklärung</h1>
-    <p class="updated"><span data-l="en">Last updated: 17 October 2026</span><span data-l="de">Stand: 17. Oktober 2026</span></p>
+    <p class="upd"><span data-l="de">Stand: 17. Oktober 2026</span><span data-l="en">Last updated: 17 October 2026</span></p>
   </header>
-
   <main>
-    <!-- ================= ENGLISH ================= -->
-    <div data-l="en">
-      <section class="card hl">
-        <h2>In short</h2>
-        <ul>
-          <li>The app has no user accounts of its own and no servers of its own. We do not receive or store your data.</li>
-          <li>No advertising, no analytics, no crash-reporting or tracking services.</li>
-          <li>Your data stays on your device. The app only connects to the services listed below.</li>
-          <li>You can delete everything by uninstalling the app or clearing its data.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">1</span>Who is responsible</h2>
-        <p>“Anime App” (Android) is published by the individual developer <b>Lampe332</b>. Questions or requests: please open an issue at <a href="https://github.com/Lampe332/anime-app-privacy/issues">github.com/Lampe332/anime-app-privacy/issues</a> and do not post personal data there.</p>
-        <p>The app is not affiliated with AniList or any other service named here.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">2</span>Data stored on your device</h2>
-        <p>The app keeps the following data locally, in its private app storage. It is not uploaded to us.</p>
-        <ul>
-          <li><b>AniList access token</b>, if you sign in with AniList.</li>
-          <li><b>Settings and lists:</b> app settings, language, and cached copies of your anime and manga lists and progress.</li>
-          <li><b>Downloads:</b> episodes or chapters you choose to download for offline use.</li>
-          <li><b>Extension data:</b> extensions you install and their settings.</li>
-          <li><b>Age check result:</b> only a “minor on this device” marker if you enter a birth date under 18. The birth date itself is not stored.</li>
-        </ul>
-        <p>The app turns off Android cloud and device-transfer backup, so this data is not copied to Google Drive backups.</p>
-        <p>The app runs a small local server that only listens on <code>127.0.0.1</code>. It is reachable from your device only.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">3</span>Connections to other services</h2>
-        <p>When you use the app, your device connects directly to these services. They receive technical data such as your IP address and request details, under their own privacy policies.</p>
-        <div class="table">
-          <div class="row"><b>AniList</b><span><code>graphql.anilist.co</code>, images from AniList’s CDN. Used to load and update your lists, search, and details. Receives your access token (when signed in), your searches and your watch progress.</span></div>
-          <div class="row"><b>Episode metadata</b><span><code>api.ani.zip</code>, and <code>anime.clap.ing</code> if you enable the fallback metadata option. Receive anime IDs only, to load episode titles and images.</span></div>
-          <div class="row"><b>Your own marketplace and extension URLs</b><span>The app has no preset marketplace. If you enter a marketplace URL or add an extension, your device connects to the address you entered. Those operators see your IP address and the request.</span></div>
-          <div class="row"><b>Announcements</b><span>The app may fetch a small public JSON file with news from <code>raw.githubusercontent.com</code> (GitHub).</span></div>
-          <div class="row"><b>Google Play Age Signals</b><span>For the age check, the app asks Google Play services for your age range. This is handled by Google under <a href="https://policies.google.com/privacy">Google’s privacy policy</a>. The app only uses the result (adult or not) on your device.</span></div>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">4</span>Extensions and plugins</h2>
-        <p>Extensions and plugins you install are code from third parties and run inside the app on your device. Depending on the permissions they request, they can use app data, which may include your AniList token, and they can contact servers of their own. Only install extensions you trust. We do not control what they do.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">5</span>Age limit and mature content</h2>
-        <p>AniList content flagged 18+ is always blocked. “Mature titles” stay locked unless the age check confirms you are 18 or older. The age check uses Google Play Age Signals where available, otherwise a birth date you enter once. A date under 18 locks the feature on this device.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">6</span>Deleting your data</h2>
-        <p>We hold no data about you on our side, so there is nothing to delete with us. To remove local data, sign out in the app, then clear the app’s storage in Android settings or uninstall the app. To remove your AniList data, use your AniList account settings.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">7</span>Changes and contact</h2>
-        <p>If this policy changes, the new version is published on this page with a new date. Contact: <a href="https://github.com/Lampe332/anime-app-privacy/issues">GitHub issues</a>.</p>
-      </section>
-    </div>
-
-    <!-- ================= DEUTSCH ================= -->
-    <div data-l="de">
-      <section class="card hl">
-        <h2>Kurz gesagt</h2>
-        <ul>
-          <li>Die App hat keine eigenen Nutzerkonten und keine eigenen Server. Wir erhalten und speichern deine Daten nicht.</li>
-          <li>Keine Werbung, keine Analyse-, Absturzberichts- oder Tracking-Dienste.</li>
-          <li>Deine Daten bleiben auf deinem Gerät. Die App verbindet sich nur mit den unten genannten Diensten.</li>
-          <li>Du kannst alles löschen, indem du die App deinstallierst oder ihre Daten löschst.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">1</span>Verantwortlicher</h2>
-        <p>„Anime App“ (Android) wird vom Einzelentwickler <b>Lampe332</b> herausgegeben. Fragen oder Anliegen: bitte ein Issue unter <a href="https://github.com/Lampe332/anime-app-privacy/issues">github.com/Lampe332/anime-app-privacy/issues</a> eröffnen und dort keine personenbezogenen Daten posten.</p>
-        <p>Die App steht in keiner Verbindung zu AniList oder anderen hier genannten Diensten.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">2</span>Auf deinem Gerät gespeicherte Daten</h2>
-        <p>Die App speichert folgende Daten lokal im privaten App-Speicher. Sie werden nicht an uns übertragen.</p>
-        <ul>
-          <li><b>AniList-Zugriffstoken</b>, wenn du dich mit AniList anmeldest.</li>
-          <li><b>Einstellungen und Listen:</b> App-Einstellungen, Sprache und zwischengespeicherte Kopien deiner Anime- und Manga-Listen samt Fortschritt.</li>
-          <li><b>Downloads:</b> Episoden oder Kapitel, die du für die Offline-Nutzung herunterlädst.</li>
-          <li><b>Erweiterungsdaten:</b> von dir installierte Erweiterungen und deren Einstellungen.</li>
-          <li><b>Ergebnis der Altersprüfung:</b> nur eine Markierung „minderjährig auf diesem Gerät“, falls du ein Geburtsdatum unter 18 eingibst. Das Geburtsdatum selbst wird nicht gespeichert.</li>
-        </ul>
-        <p>Die App schaltet das Android-Cloud- und Geräte-Backup ab, diese Daten landen also nicht in Google-Drive-Sicherungen.</p>
-        <p>Die App betreibt einen kleinen lokalen Server, der nur auf <code>127.0.0.1</code> lauscht und damit nur von deinem Gerät aus erreichbar ist.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">3</span>Verbindungen zu anderen Diensten</h2>
-        <p>Bei der Nutzung verbindet sich dein Gerät direkt mit diesen Diensten. Sie erhalten technische Daten wie deine IP-Adresse und Anfragedetails; es gelten ihre eigenen Datenschutzerklärungen.</p>
-        <div class="table">
-          <div class="row"><b>AniList</b><span><code>graphql.anilist.co</code>, Bilder vom AniList-CDN. Dient zum Laden und Aktualisieren deiner Listen, zur Suche und für Detailseiten. Erhält dein Zugriffstoken (wenn angemeldet), deine Suchanfragen und deinen Fortschritt.</span></div>
-          <div class="row"><b>Episoden-Metadaten</b><span><code>api.ani.zip</code> sowie <code>anime.clap.ing</code>, wenn du die Ersatz-Metadatenquelle aktivierst. Erhalten nur Anime-IDs, um Episodentitel und Bilder zu laden.</span></div>
-          <div class="row"><b>Deine eigenen Marketplace- und Erweiterungs-URLs</b><span>Die App hat keinen voreingestellten Marketplace. Wenn du eine Marketplace-URL eingibst oder eine Erweiterung hinzufügst, verbindet sich dein Gerät mit der eingegebenen Adresse. Deren Betreiber sehen deine IP-Adresse und die Anfrage.</span></div>
-          <div class="row"><b>Ankündigungen</b><span>Die App kann eine kleine öffentliche JSON-Datei mit Neuigkeiten von <code>raw.githubusercontent.com</code> (GitHub) abrufen.</span></div>
-          <div class="row"><b>Google Play Age Signals</b><span>Für die Altersprüfung fragt die App bei Google Play Services deine Altersgruppe ab. Das verarbeitet Google nach der <a href="https://policies.google.com/privacy?hl=de">Datenschutzerklärung von Google</a>. Die App nutzt nur das Ergebnis (volljährig oder nicht) auf deinem Gerät.</span></div>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">4</span>Erweiterungen und Plugins</h2>
-        <p>Erweiterungen und Plugins, die du installierst, sind Code von Dritten und laufen in der App auf deinem Gerät. Je nach angeforderten Berechtigungen können sie App-Daten nutzen, darunter möglicherweise dein AniList-Token, und eigene Server kontaktieren. Installiere nur Erweiterungen, denen du vertraust. Wir haben keinen Einfluss darauf, was sie tun.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">5</span>Altersgrenze und Inhalte für Erwachsene</h2>
-        <p>AniList-Inhalte mit 18+-Kennzeichnung sind immer gesperrt. „Mature titles“ bleiben gesperrt, solange die Altersprüfung nicht bestätigt, dass du mindestens 18 bist. Die Prüfung nutzt Google Play Age Signals, wo verfügbar, sonst ein einmal eingegebenes Geburtsdatum. Ein Datum unter 18 sperrt die Funktion auf diesem Gerät.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">6</span>Daten löschen</h2>
-        <p>Wir haben keine Daten über dich auf unserer Seite, bei uns gibt es daher nichts zu löschen. Lokale Daten entfernst du, indem du dich in der App abmeldest und danach in den Android-Einstellungen den App-Speicher löschst oder die App deinstallierst. Deine AniList-Daten verwaltest du in den Einstellungen deines AniList-Kontos.</p>
-      </section>
-
-      <section class="card">
-        <h2><span class="n">7</span>Änderungen und Kontakt</h2>
-        <p>Ändert sich diese Erklärung, erscheint die neue Fassung mit neuem Datum auf dieser Seite. Kontakt: <a href="https://github.com/Lampe332/anime-app-privacy/issues">GitHub-Issues</a>.</p>
-      </section>
-    </div>
+<div data-l="de">
+<nav class="card toc" aria-label="Inhalt"><div class="row"><b class="toc-h">Inhalt</b><ol>
+<li><a href="#s1-de"><span class="n">1</span>Verantwortlicher und Kontakt</a></li>
+<li><a href="#s2-de"><span class="n">2</span>Was die App auf deinem Gerät speichert</a></li>
+<li><a href="#s3-de"><span class="n">3</span>Mit wem die App Daten austauscht</a></li>
+<li><a href="#s4-de"><span class="n">4</span>AniList: Was AniList sieht</a></li>
+<li><a href="#s5-de"><span class="n">5</span>Altersprüfung und Inhalte für Erwachsene</a></li>
+<li><a href="#s6-de"><span class="n">6</span>Erweiterungen und Plugins</a></li>
+<li><a href="#s7-de"><span class="n">7</span>Rechtsgrundlagen</a></li>
+<li><a href="#s8-de"><span class="n">8</span>Speicherdauer und Löschung</a></li>
+<li><a href="#s9-de"><span class="n">9</span>Übermittlung in Drittländer</a></li>
+<li><a href="#s10-de"><span class="n">10</span>Diese Webseite (GitHub Pages)</a></li>
+<li><a href="#s11-de"><span class="n">11</span>Deine Rechte</a></li>
+<li><a href="#s12-de"><span class="n">12</span>Änderungen</a></li>
+</ol></div></nav>
+<section class="sum"><div class="alert"><b>Kurzfassung</b><ul>
+<li>Die App hat keine eigenen Nutzerkonten und keine eigenen Server. Wir erhalten keine Daten aus der App.</li>
+<li>Keine Werbung, keine Analyse-, Absturzberichts- oder Tracking-Dienste.</li>
+<li>Deine Daten bleiben auf dem Gerät. Die App ruft nur die in Abschnitt 3 genannten Dienste auf; diese sehen technische Daten wie deine IP-Adresse.</li>
+<li>Du löschst alles, indem du den App-Speicher löschst oder die App deinstallierst.</li>
+</ul></div></section>
+<section id="s1-de"><h2><span class="n">1</span>Verantwortlicher und Kontakt</h2><div class="card">
+<div class="row"><p>„Anime App“ für Android wird von einer Privatperson herausgegeben, kostenlos und ohne Werbung.</p><p><b>Verantwortlicher</b> im Sinne der DSGVO, soweit wir überhaupt Daten verarbeiten (siehe Abschnitte 7 und 10): <b>Nick Schäfer</b></p><p><b>Kontakt für Datenschutzfragen:</b> <a href="mailto:nickschaefer508@gmail.com">nickschaefer508@gmail.com</a></p></div>
+<div class="row"><p>Ein Datenschutzbeauftragter ist nicht benannt. Deine E-Mail und ihr Inhalt werden nur genutzt, um deine Anfrage zu beantworten, und danach gelöscht.</p><p>Die App steht in keiner Verbindung zu AniList oder anderen hier genannten Diensten.</p></div>
+</div></section>
+<section id="s2-de"><h2><span class="n">2</span>Was die App auf deinem Gerät speichert</h2><div class="card">
+<div class="row"><p>Diese Daten liegen im privaten App-Speicher deines Geräts. Sie werden nicht an uns übertragen.</p><ul><li><b>AniList-Zugriffstoken</b>, wenn du dich bei AniList anmeldest. Ein Passwort speichert die App nicht.</li><li><b>Einstellungen und Listen:</b> App-Einstellungen, Sprache, zwischengespeicherte Kopien deiner Anime- und Manga-Listen samt Fortschritt.</li><li><b>Offline-Downloads:</b> Episoden, die du selbst zum Offline-Ansehen lädst.</li><li><b>Erweiterungen:</b> von dir hinzugefügte Erweiterungen und deren Einstellungen.</li><li><b>Altersprüfung:</b> nur die Markierung „minderjährig auf diesem Gerät“, falls du ein Geburtsdatum unter 18 angibst. Das Geburtsdatum selbst wird nicht gespeichert.</li></ul></div>
+<div class="row"><p>Android-Cloud-Sicherung und Geräte-Übertragung sind für die App abgeschaltet. Diese Daten landen also nicht in Google-Sicherungen.</p><p>Die App betreibt einen kleinen Server, der nur auf <code>127.0.0.1</code> (Port 43211) lauscht und nur von deinem Gerät erreichbar ist. Unverschlüsselte Verbindungen erlaubt die App nur zu diesem lokalen Server, nicht ins Internet.</p></div>
+</div></section>
+<section id="s3-de"><h2><span class="n">3</span>Mit wem die App Daten austauscht</h2><div class="card">
+<div class="row"><p>Wir betreiben keine eigenen Server und erhalten nichts davon. Bei der Nutzung verbindet sich dein Gerät <b>direkt</b> mit den folgenden Diensten. Sie sehen dabei technische Daten wie deine IP-Adresse und die Anfrage und verarbeiten sie nach ihren eigenen Datenschutzerklärungen.</p></div>
+<div class="row"><b>AniList</b><p><code>graphql.anilist.co</code>, Cover-Bilder von <code>s4.anilist.co</code>. Für Listen, Suche, Details und Fortschritt. Was AniList sieht, steht in Abschnitt 4.</p></div>
+<div class="row"><b>Homescreen-Widget (optional)</b><p>Wenn du das Widget „Kommende Anime“ nutzt, fragt es AniList direkt nach den Listeneinträgen deines AniList-Benutzernamens und lädt Cover. Es sendet dabei deinen Benutzernamen, kein Zugriffstoken.</p></div>
+<div class="row"><b>Episoden-Metadaten</b><p><code>api.ani.zip</code> erhält die Anime-ID, um Episodentitel und Bilder zu liefern. <code>anime.clap.ing</code> wird nur gefragt, wenn du „Use fallback episode metadata“ einschaltest (standardmäßig aus), ebenfalls mit der Anime-ID.</p></div>
+<div class="row"><b>Ankündigungen</b><p>Die App kann eine kleine öffentliche Datei mit Neuigkeiten von <code>raw.githubusercontent.com</code> (GitHub) abrufen. Es wird nur die Datei angefordert.</p></div>
+<div class="row"><b>Google Play</b><p>Für die Altersprüfung nutzt die App die Play-Age-Signals-Schnittstelle von Google (Abschnitt 5). Für den Download der App über Google Play gilt die Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy?hl=de">policies.google.com/privacy</a>.</p></div>
+<div class="row"><b>Von dir eingetragene Adressen</b><p>Die App hat keinen voreingestellten Marketplace. Trägst du eine Marketplace- oder Erweiterungs-URL ein, verbindet sich dein Gerät mit genau dieser Adresse. Deren Betreiber sehen deine IP-Adresse und die Anfrage.</p></div>
+</div></section>
+<section id="s4-de"><h2><span class="n">4</span>AniList: Was AniList sieht</h2><div class="card">
+<div class="row"><p>Die Anmeldung läuft auf der Seite von AniList. Du erlaubst der App den Zugriff, AniList gibt der App ein <b>Zugriffstoken</b>. Die App speichert nur dieses Token, kein Passwort. Mit dem Token ruft die App AniList im Namen deines Kontos auf.</p><p><b>Mit Anmeldung</b> sieht AniList: dein Konto (Benutzername, ID), deine IP-Adresse, Geräte- und App-Angaben der Anfrage, deine Suchen, die Titel, die du aufrufst, und alle Änderungen, die du in der App machst (Status, Fortschritt, Bewertung).</p><p><b>Ohne Anmeldung</b> sieht AniList deine IP-Adresse, die Anfragedaten und deine Suchen, aber kein Konto.</p><p>Den Zugriff entziehst du über die Einstellungen deines AniList-Kontos oder indem du dich in der App abmeldest. Für diese Daten ist AniList selbst verantwortlich: <a href="https://anilist.co">anilist.co</a>.</p></div>
+</div></section>
+<section id="s5-de"><h2><span class="n">5</span>Altersprüfung und Inhalte für Erwachsene</h2><div class="card">
+<div class="row"><p>AniList-Inhalte mit 18+-Kennzeichnung sind in der App immer gesperrt. Die Einstellung „Mature titles“ lässt sich nur einschalten, wenn die Altersprüfung bestätigt, dass du mindestens 18 bist.</p><p><b>1. Google Play Age Signals:</b> Dort, wo Google ein Signal liefert, fragt die App über Google Play Services deine Altersangabe ab. Das verarbeitet Google nach seiner Datenschutzerklärung. Die App nutzt das Ergebnis nur auf deinem Gerät für diese eine Entscheidung und speichert es nicht.</p><p><b>2. Geburtsdatum:</b> Gibt es kein Signal, fragt die App einmal nach deinem Geburtsdatum. Es wird weder gespeichert noch übertragen. Bei einem Datum unter 18 bleibt die Funktion auf diesem Gerät gesperrt; gespeichert wird nur die Markierung „minderjährig auf diesem Gerät“.</p><p>Die Prüfung läuft nur, wenn du „Mature titles“ einschalten willst.</p></div>
+</div></section>
+<section id="s6-de"><h2><span class="n">6</span>Erweiterungen und Plugins</h2><div class="card">
+<div class="row"><p>Erweiterungen und Plugins, die du selbst hinzufügst, sind Code von Dritten und laufen in der App auf deinem Gerät. Je nach angeforderter Berechtigung können sie App-Daten nutzen, darunter dein AniList-Token, und eigene Server kontaktieren. Wir haben keinen Einfluss darauf, was sie tun. Füge nur Erweiterungen hinzu, denen du vertraust.</p></div>
+</div></section>
+<section id="s7-de"><h2><span class="n">7</span>Rechtsgrundlagen</h2><div class="card">
+<div class="row"><p>Nach unserer Einschätzung gilt:</p><ul><li><b>App und Verbindungen zu den Diensten aus Abschnitt 3:</b> Wir verarbeiten dabei keine Daten. Die Verbindungen löst du durch die Nutzung aus. Jeder Dienst ist für seine Verarbeitung selbst verantwortlich und nennt die Rechtsgrundlage in seiner Erklärung.</li><li><b>Altersprüfung auf dem Gerät:</b> Jugendschutz, Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Die Daten verlassen das Gerät nicht, außer der Anfrage an Google Play Services.</li><li><b>Beantwortung deiner E-Mail:</b> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, Anfragen zu beantworten).</li><li><b>Diese Webseite:</b> siehe Abschnitt 10.</li></ul></div>
+</div></section>
+<section id="s8-de"><h2><span class="n">8</span>Speicherdauer und Löschung</h2><div class="card">
+<div class="row"><ul><li><b>Auf deinem Gerät:</b> bis du die Daten löschst. Melde dich in der App ab und lösche den App-Speicher in den Android-Einstellungen oder deinstalliere die App.</li><li><b>Bei den Diensten:</b> bestimmen die Dienste selbst. Deine AniList-Daten verwaltest du in deinem AniList-Konto.</li><li><b>E-Mails an uns:</b> bis deine Anfrage erledigt ist.</li></ul><p>Wir haben keine Daten über dich auf unserer Seite, bei uns gibt es daher nichts zu löschen.</p></div>
+</div></section>
+<section id="s9-de"><h2><span class="n">9</span>Übermittlung in Drittländer</h2><div class="card">
+<div class="row"><p>Wir übermitteln selbst nichts. Dein Gerät verbindet sich direkt mit den Diensten. Einige haben Server außerhalb der EU und des EWR:</p><ul><li><b>GitHub</b> (USA): nimmt am EU-U.S. Data Privacy Framework teil und nutzt Standardvertragsklauseln, siehe <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</li><li><b>Google:</b> nutzt eigene Garantien, siehe <a href="https://policies.google.com/privacy?hl=de">Datenschutzerklärung von Google</a>.</li><li><b>AniList, api.ani.zip, anime.clap.ing und von dir eingetragene Adressen:</b> Wir wissen nicht, wo diese Betreiber ihre Server haben. Eine Übermittlung in Länder ohne Angemessenheitsbeschluss ist möglich. Maßgeblich sind die Erklärungen der Betreiber.</li></ul></div>
+</div></section>
+<section id="s10-de"><h2><span class="n">10</span>Diese Webseite (GitHub Pages)</h2><div class="card">
+<div class="row"><p>Diese Seite wird über <b>GitHub Pages</b> bereitgestellt (GitHub, USA). Beim Aufruf übermittelt dein Browser technische Daten an GitHub, etwa IP-Adresse, Zeitpunkt, aufgerufene Seite sowie Browser- und Geräteangaben. GitHub verarbeitet sie nach seiner <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung</a> für Betrieb und Sicherheit. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sichere und effiziente Bereitstellung der Seite).</p><p>Wir lesen keine Server-Logs aus und setzen keine Statistik-Werkzeuge ein. Die Seite setzt keine Cookies, lädt keine Dateien von fremden Servern (die Schrift Inter liegt auf dieser Seite, Lizenz SIL OFL 1.1) und speichert nichts in deinem Browser. Die Sprachwahl steht nur in der Adresse (<code>?lang=de</code> oder <code>?lang=en</code>).</p></div>
+</div></section>
+<section id="s11-de"><h2><span class="n">11</span>Deine Rechte</h2><div class="card">
+<div class="row"><p>Du hast nach der DSGVO das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Schreib dazu an <a href="mailto:nickschaefer508@gmail.com">nickschaefer508@gmail.com</a>. Da wir keine Daten über dich haben, können wir nur zu E-Mails Auskunft geben. Rechte gegenüber AniList, GitHub, Google und anderen machst du bei diesen Stellen geltend.</p><p><b>Beschwerderecht:</b> Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel an deinem Wohnort, deinem Arbeitsplatz oder am Ort des vermuteten Verstoßes (Art. 77 DSGVO). Adressen der deutschen Behörden findest du über <a href="https://www.bfdi.bund.de">bfdi.bund.de</a>.</p><p>Du musst keine Daten bereitstellen, um die App zu nutzen. Ohne AniList-Konto zeigt die App jedoch keine eigenen Listen. Automatisierte Entscheidungen oder Profiling gibt es nicht. Einzige Ausnahme: Die Altersprüfung entscheidet auf dem Gerät automatisch, ob „Mature titles“ freigeschaltet wird.</p></div>
+</div></section>
+<section id="s12-de"><h2><span class="n">12</span>Änderungen</h2><div class="card">
+<div class="row"><p>Ändert sich die App oder die Rechtslage, passen wir diese Erklärung an. Die neue Fassung steht mit neuem Datum auf dieser Seite. Maßgeblich ist die deutsche Fassung.</p></div>
+</div></section>
+</div>
+<div data-l="en">
+<nav class="card toc" aria-label="Contents"><div class="row"><b class="toc-h">Contents</b><ol>
+<li><a href="#s1-en"><span class="n">1</span>Controller and contact</a></li>
+<li><a href="#s2-en"><span class="n">2</span>What the app stores on your device</a></li>
+<li><a href="#s3-en"><span class="n">3</span>Who the app exchanges data with</a></li>
+<li><a href="#s4-en"><span class="n">4</span>AniList: what AniList sees</a></li>
+<li><a href="#s5-en"><span class="n">5</span>Age check and mature content</a></li>
+<li><a href="#s6-en"><span class="n">6</span>Extensions and plugins</a></li>
+<li><a href="#s7-en"><span class="n">7</span>Legal bases</a></li>
+<li><a href="#s8-en"><span class="n">8</span>Storage period and deletion</a></li>
+<li><a href="#s9-en"><span class="n">9</span>Transfers to third countries</a></li>
+<li><a href="#s10-en"><span class="n">10</span>This website (GitHub Pages)</a></li>
+<li><a href="#s11-en"><span class="n">11</span>Your rights</a></li>
+<li><a href="#s12-en"><span class="n">12</span>Changes</a></li>
+</ol></div></nav>
+<section class="sum"><div class="alert"><b>In short</b><ul>
+<li>The app has no user accounts and no servers of its own. We receive no data from the app.</li>
+<li>No advertising, no analytics, crash-reporting or tracking services.</li>
+<li>Your data stays on your device. The app only calls the services listed in section 3; they see technical data such as your IP address.</li>
+<li>You delete everything by clearing the app storage or uninstalling the app.</li>
+</ul></div></section>
+<section id="s1-en"><h2><span class="n">1</span>Controller and contact</h2><div class="card">
+<div class="row"><p>“Anime App” for Android is published by a private individual, free of charge and without ads.</p><p><b>Controller</b> under the GDPR, as far as we process any data at all (see sections 7 and 10): <b>Nick Schäfer</b></p><p><b>Contact for privacy questions:</b> <a href="mailto:nickschaefer508@gmail.com">nickschaefer508@gmail.com</a></p></div>
+<div class="row"><p>No data protection officer is appointed. Your email and its content are used only to answer your request and are deleted afterwards.</p><p>The app is not affiliated with AniList or any other service named here.</p></div>
+</div></section>
+<section id="s2-en"><h2><span class="n">2</span>What the app stores on your device</h2><div class="card">
+<div class="row"><p>This data sits in the private app storage of your device. It is not sent to us.</p><ul><li><b>AniList access token</b>, if you sign in with AniList. The app does not store a password.</li><li><b>Settings and lists:</b> app settings, language, cached copies of your anime and manga lists and progress.</li><li><b>Offline downloads:</b> episodes you choose to download for offline viewing.</li><li><b>Extensions:</b> extensions you add and their settings.</li><li><b>Age check:</b> only a “minor on this device” marker if you enter a birth date under 18. The birth date itself is not stored.</li></ul></div>
+<div class="row"><p>Android cloud backup and device transfer are turned off for the app, so this data is not copied into Google backups.</p><p>The app runs a small server that only listens on <code>127.0.0.1</code> (port 43211) and can be reached from your device only. The app allows unencrypted connections only to this local server, not to the internet.</p></div>
+</div></section>
+<section id="s3-en"><h2><span class="n">3</span>Who the app exchanges data with</h2><div class="card">
+<div class="row"><p>We run no servers of our own and receive none of this. When you use the app, your device connects <b>directly</b> to the services below. They see technical data such as your IP address and the request, and process it under their own privacy policies.</p></div>
+<div class="row"><b>AniList</b><p><code>graphql.anilist.co</code>, cover images from <code>s4.anilist.co</code>. For lists, search, details and progress. What AniList sees is in section 4.</p></div>
+<div class="row"><b>Home-screen widget (optional)</b><p>If you use the upcoming-anime widget, it asks AniList directly for the list entries of your AniList user name and loads covers. It sends your user name, not an access token.</p></div>
+<div class="row"><b>Episode metadata</b><p><code>api.ani.zip</code> receives the anime ID to deliver episode titles and images. <code>anime.clap.ing</code> is only asked if you turn on “Use fallback episode metadata” (off by default), also with the anime ID.</p></div>
+<div class="row"><b>Announcements</b><p>The app may fetch a small public news file from <code>raw.githubusercontent.com</code> (GitHub). Only the file is requested.</p></div>
+<div class="row"><b>Google Play</b><p>For the age check, the app uses Google’s Play Age Signals interface (section 5). Downloading the app through Google Play is covered by Google’s privacy policy: <a href="https://policies.google.com/privacy?hl=en">policies.google.com/privacy</a>.</p></div>
+<div class="row"><b>Addresses you enter</b><p>The app has no preset marketplace. If you enter a marketplace or extension URL, your device connects to exactly that address. Its operator sees your IP address and the request.</p></div>
+</div></section>
+<section id="s4-en"><h2><span class="n">4</span>AniList: what AniList sees</h2><div class="card">
+<div class="row"><p>Sign-in happens on AniList’s own page. You allow the app access, and AniList hands the app an <b>access token</b>. The app stores only this token, no password. With the token, the app calls AniList on behalf of your account.</p><p><b>Signed in,</b> AniList sees: your account (user name, ID), your IP address, device and app details of the request, your searches, the titles you open, and every change you make in the app (status, progress, score).</p><p><b>Not signed in,</b> AniList sees your IP address, the request data and your searches, but no account.</p><p>You can revoke access in your AniList account settings or by signing out in the app. AniList itself is responsible for this data: <a href="https://anilist.co">anilist.co</a>.</p></div>
+</div></section>
+<section id="s5-en"><h2><span class="n">5</span>Age check and mature content</h2><div class="card">
+<div class="row"><p>AniList content flagged 18+ is always blocked in the app. The “Mature titles” setting can only be turned on if the age check confirms that you are 18 or older.</p><p><b>1. Google Play Age Signals:</b> Where Google provides a signal, the app asks Google Play services for your age information. Google handles that under its privacy policy. The app uses the result only on your device for this one decision and does not store it.</p><p><b>2. Birth date:</b> If there is no signal, the app asks once for your birth date. It is neither stored nor transmitted. For a date under 18 the feature stays locked on this device; only the “minor on this device” marker is stored.</p><p>The check only runs when you want to turn on “Mature titles”.</p></div>
+</div></section>
+<section id="s6-en"><h2><span class="n">6</span>Extensions and plugins</h2><div class="card">
+<div class="row"><p>Extensions and plugins that you add yourself are third-party code and run inside the app on your device. Depending on the permission they request, they can use app data, including your AniList token, and contact servers of their own. We have no control over what they do. Only add extensions you trust.</p></div>
+</div></section>
+<section id="s7-en"><h2><span class="n">7</span>Legal bases</h2><div class="card">
+<div class="row"><p>In our assessment:</p><ul><li><b>The app and connections to the services in section 3:</b> we process no data in this. You trigger the connections by using the app. Each service is responsible for its own processing and names its legal basis in its policy.</li><li><b>Age check on the device:</b> protection of minors, Art. 6(1)(f) GDPR (legitimate interest). The data does not leave the device, apart from the request to Google Play services.</li><li><b>Answering your email:</b> Art. 6(1)(f) GDPR (legitimate interest in answering inquiries).</li><li><b>This website:</b> see section 10.</li></ul></div>
+</div></section>
+<section id="s8-en"><h2><span class="n">8</span>Storage period and deletion</h2><div class="card">
+<div class="row"><ul><li><b>On your device:</b> until you delete the data. Sign out in the app and clear the app storage in Android settings, or uninstall the app.</li><li><b>At the services:</b> set by the services themselves. You manage your AniList data in your AniList account.</li><li><b>Emails to us:</b> until your request is dealt with.</li></ul><p>We hold no data about you on our side, so there is nothing to delete with us.</p></div>
+</div></section>
+<section id="s9-en"><h2><span class="n">9</span>Transfers to third countries</h2><div class="card">
+<div class="row"><p>We transfer nothing ourselves. Your device connects directly to the services. Some have servers outside the EU and EEA:</p><ul><li><b>GitHub</b> (USA): participates in the EU-U.S. Data Privacy Framework and uses standard contractual clauses, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>.</li><li><b>Google:</b> relies on its own safeguards, see <a href="https://policies.google.com/privacy?hl=en">Google’s privacy policy</a>.</li><li><b>AniList, api.ani.zip, anime.clap.ing and addresses you enter:</b> we do not know where these operators run their servers. A transfer to countries without an adequacy decision is possible. The operators’ own policies apply.</li></ul></div>
+</div></section>
+<section id="s10-en"><h2><span class="n">10</span>This website (GitHub Pages)</h2><div class="card">
+<div class="row"><p>This page is served through <b>GitHub Pages</b> (GitHub, USA). When you open it, your browser sends technical data to GitHub, such as IP address, time, requested page and browser and device details. GitHub processes it under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a> for operation and security. The legal basis is Art. 6(1)(f) GDPR (secure and efficient delivery of the page).</p><p>We do not read server logs and use no analytics tools. The page sets no cookies, loads no files from third-party servers (the Inter typeface is hosted on this page, licence SIL OFL 1.1) and stores nothing in your browser. The language choice lives only in the address (<code>?lang=de</code> or <code>?lang=en</code>).</p></div>
+</div></section>
+<section id="s11-en"><h2><span class="n">11</span>Your rights</h2><div class="card">
+<div class="row"><p>Under the GDPR you have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and objection (Art. 21). Write to <a href="mailto:nickschaefer508@gmail.com">nickschaefer508@gmail.com</a>. Since we hold no data about you, we can only give information about emails. Exercise your rights against AniList, GitHub, Google and others with those parties.</p><p><b>Right to complain:</b> You can lodge a complaint with a data protection supervisory authority, for example where you live, where you work or where the alleged infringement took place (Art. 77 GDPR). Addresses of the German authorities are listed via <a href="https://www.bfdi.bund.de">bfdi.bund.de</a>.</p><p>You do not have to provide any data to use the app. Without an AniList account, though, the app shows no lists of its own. There is no automated decision-making or profiling. The one exception: the age check decides automatically on the device whether “Mature titles” is unlocked.</p></div>
+</div></section>
+<section id="s12-en"><h2><span class="n">12</span>Changes</h2><div class="card">
+<div class="row"><p>If the app or the law changes, we update this policy. The new version is published on this page with a new date. The German version prevails.</p></div>
+</div></section>
+</div>
   </main>
-
   <footer>
-    <span data-l="en">Anime App · Privacy Policy</span><span data-l="de">Anime App · Datenschutzerklärung</span>
+    <span data-l="de">Anime App · Datenschutzerklärung · Nick Schäfer</span><span data-l="en">Anime App · Privacy policy · Nick Schäfer</span>
   </footer>
 </div>
-
 <script>
 (function () {
   var root = document.documentElement;
   var buttons = document.querySelectorAll(".lang button");
+  var titles = { de: "Anime App – Datenschutzerklärung", en: "Anime App – Privacy policy" };
   function apply(lang) {
     root.setAttribute("data-lang", lang);
     root.setAttribute("lang", lang);
-    document.title = lang === "de" ? "Anime App Datenschutzerklärung" : "Anime App Privacy Policy";
+    document.title = titles[lang];
     buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === lang)); });
   }
-  var lang = "en";
-  try {
-    var fromHash = (location.hash || "").replace("#", "");
-    var saved = localStorage.getItem("lang");
-    if (fromHash === "de" || fromHash === "en") lang = fromHash;
-    else if (saved === "de" || saved === "en") lang = saved;
-    else if ((navigator.language || "").toLowerCase().indexOf("de") === 0) lang = "de";
-  } catch (e) {
-    if ((navigator.language || "").toLowerCase().indexOf("de") === 0) lang = "de";
+  function langFromUrl() {
+    var m = /[?&]lang=(de|en)\b/.exec(location.search);
+    return m ? m[1] : null;
   }
+  var lang = langFromUrl() || ((navigator.language || "").toLowerCase().indexOf("de") === 0 ? "de" : "en");
   apply(lang);
+  function jump(from, to) {
+    var h = location.hash;
+    if (h && h.slice(-3) === "-" + from) {
+      var el = document.getElementById(h.slice(1, -3) + "-" + to);
+      if (el) el.scrollIntoView();
+    }
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".toc a");
+    if (!a) return;
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) { e.preventDefault(); el.scrollIntoView(); try { history.replaceState(null, "", location.pathname + location.search + "#" + id); } catch (x) {} }
+  });
   buttons.forEach(function (b) {
     b.addEventListener("click", function () {
+      var from = root.getAttribute("data-lang");
       var l = b.getAttribute("data-set");
       apply(l);
-      try { localStorage.setItem("lang", l); } catch (e) {}
-      try { history.replaceState(null, "", "#" + l); } catch (e) {}
+      try { history.replaceState(null, "", "?lang=" + l + location.hash); } catch (e) {}
+      jump(from, l);
     });
   });
 })();
